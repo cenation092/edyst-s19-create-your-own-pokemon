@@ -11,10 +11,11 @@ This repo contains a **database-backed API** which allows you to **CREATE, READ,
 ## How to run the project
     
 * Open terminal then `cd edyst-s19-create-your-own-pokemon/backend` 
-* Run command `python app.py` in your terminal.
+* Run command `python app.py` in your terminal then database will create named `pokemon`.
+![database](https://user-images.githubusercontent.com/21224753/56923091-55252c80-6ae7-11e9-900b-8ad22bbea42c.png)
 
 #### Create a single pokémon card
-Hit following API http://127.0.0.1:8006/api/pokemon/ in postman then write JSON file of this type
+* Hit following API http://127.0.0.1:8006/api/pokemon/ in postman then write JSON file of this type
 ```
     {
         "pokemon": {
@@ -28,4 +29,19 @@ Hit following API http://127.0.0.1:8006/api/pokemon/ in postman then write JSON 
         }
     }
 ```
-    
+This will return a JSON file with pokemon `id` in this format.
+
+```
+    {
+        "pokemon": {
+            "name": "charmander_new_name",
+            "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+            "cardColours": {
+                "fg": "#eeeeee",
+                "bg": "#3e3e3e",
+                "desc": "#111111"
+            }
+        }
+    }
+```
+![create](https://user-images.githubusercontent.com/21224753/56923284-cd8bed80-6ae7-11e9-9980-1681c91ccc00.png)
