@@ -11,7 +11,7 @@ This repo contains a **database-backed API** which allows you to **CREATE, READ,
 ## How to run the project
     
 * Open terminal then `cd edyst-s19-create-your-own-pokemon/backend` 
-* Run command `python app.py` in your terminal then database will create named `app.sqlite` in the backend folder.
+* Run command `python app.py` in your terminal this will create the database name `app.sqlite` in the backend folder.
 
 ![database](https://user-images.githubusercontent.com/21224753/56923091-55252c80-6ae7-11e9-900b-8ad22bbea42c.png)
 
@@ -123,3 +123,6 @@ Then it will return a JSON file with updated info in this format.
 
 ![DELETE](https://user-images.githubusercontent.com/21224753/56924638-08435500-6aeb-11e9-87fc-d4b7db7084a2.png)
 
+## Pokemon's Table
+
+![TABLE](https://user-images.githubusercontent.com/21224753/56925156-49883480-6aec-11e9-942b-5c9891685022.png)
