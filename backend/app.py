@@ -79,14 +79,12 @@ def validate_name(name):
 # check conditions on sprite
 def validate_sprite(sprite):
     if not sprite:
-        raise AssertionError('No name provided')
+        raise AssertionError('No sprite provided')
 
     if Pokemon.query.filter(Pokemon.sprite == sprite).first():
-        raise AssertionError('name is already in use')
+        raise AssertionError('sprite is already in use')
 
     return sprite
-
-
 
 # endpoint to create new pokemon
 @app.route("/api/pokemon/", methods=["POST"])
@@ -114,7 +112,7 @@ def create_pokemon():
 # check existance of id
 def check_id(id):
     if not id:
-        raise AssertionError('No name provided')
+        raise AssertionError('No id provided')
 
     if Pokemon.query.filter(Pokemon.id == id).first():
         return id
