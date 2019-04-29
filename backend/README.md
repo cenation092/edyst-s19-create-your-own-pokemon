@@ -14,9 +14,7 @@ This repo contains a **database-backed API** which allows you to **CREATE, READ,
 * Run command `python app.py` in your terminal.
 
 #### Create a single pokémon card
-
-    * Hit following API http://127.0.0.1:8006/api/pokemon/ in postman then write JSON file of this type
-    ```
+Hit following API http://127.0.0.1:8006/api/pokemon/ in postman then write JSON file of this type
     {
         "pokemon": {
             "name": "charmander",
@@ -28,4 +26,4 @@ This repo contains a **database-backed API** which allows you to **CREATE, READ,
             }
         }
     }
-    ```
+    
