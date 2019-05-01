@@ -7,10 +7,13 @@ from app import app, db
 
 TEST_DB = 'test.sqlite'
 
+# reference: https://www.patricksoftwareblog.com/unit-testing-a-flask-application/
+# python runs test lexicographically
+
 class PokemonCRUDTests(unittest.TestCase):
     
     @classmethod
-    def setUpClass(self):
+    def setUpClass(self): #this method will execute before executing any tests in this class only once
         app.config['TESTING'] = True
         app.config['WTF_CSRF_ENABLED'] = False
         app.config['DEBUG'] = False
@@ -19,10 +22,10 @@ class PokemonCRUDTests(unittest.TestCase):
         self.app = app.test_client()
         db.create_all()
     
-    @classmethod
-    def tearDownClass(self):
+    @classmethod 
+    def tearDownClass(self): # this method will execute when all the test in this class completes
         db.drop_all()
-    
+
     def test_create_pokemon(self):
         print("=============================== testing create pokemon API ====================================")
 
@@ -32,7 +35,7 @@ class PokemonCRUDTests(unittest.TestCase):
         
         actual_pokemon_reponse = self.app.post("http://127.0.0.1:8006/api/pokemon/", data = json.dumps(pokemon_request_data), content_type='application/json')
         actual_pokemon_reponse_data = json.loads(actual_pokemon_reponse.data)
-
+        print(actual_pokemon_reponse)
         self.assertEqual(expected_pokemon_response_data, actual_pokemon_reponse_data)
         self.assertEqual(actual_pokemon_reponse.status_code, 200)
     
@@ -68,6 +71,7 @@ class PokemonCRUDTests(unittest.TestCase):
         print("=============================== Update pokemon API test pass ====================================")
 
 
+    #since python runs tests lexicographically, z is inserted so this method will run in the last of all the tests
     def test_zdelete_pokemon(self):
         print("=============================== testing delete pokemon API ======================================")
         
