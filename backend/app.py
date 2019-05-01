@@ -54,8 +54,6 @@ class Pokemon(db.Model):
 
     #convert data into JSON format
     def toJSON(self):
-        print(self.card_colours_data)
-        print(type(self.card_colours_data))
         card_colours_data_dict = json.loads(self.card_colours_data)
         fg = card_colours_data_dict['fg']
         bg = card_colours_data_dict['bg']
@@ -68,9 +66,6 @@ def validate_name(name):
     if not name:
         raise AssertionError('No name provided')
 
-    if Pokemon.query.filter(Pokemon.name == name).first():
-        raise AssertionError('name is already in use')
-
     if len(name) < 1 or len(name) > 50:
         raise AssertionError('name must be between 1 and 50 characters')
 
@@ -80,9 +75,9 @@ def validate_name(name):
 def validate_sprite(sprite):
     if not sprite:
         raise AssertionError('No sprite provided')
-
-    if Pokemon.query.filter(Pokemon.sprite == sprite).first():
-        raise AssertionError('sprite is already in use')
+    
+    if len(sprite) < 1 or len(sprite) > 500:
+        raise AssertionError('sprite must be between 1 and 500 characters')
 
     return sprite
 
@@ -100,8 +95,6 @@ def create_pokemon():
     card_colours_data = str(pokemon["cardColours"])
     card_colours_data = card_colours_data.replace("\'", "\"")
     
-    print(card_colours_data)
-    print(type(card_colours_data))
     new_pokemon = Pokemon(name, sprite, card_colours_data)
 
     db.session.add(new_pokemon)

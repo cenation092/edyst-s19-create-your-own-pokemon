@@ -126,3 +126,6 @@ Then it will return a JSON file with updated info in this format.
 ## Pokemon's Table
 
 ![TABLE](https://user-images.githubusercontent.com/21224753/56925156-49883480-6aec-11e9-942b-5c9891685022.png)
+
+## Unit test result
+![Unit test](https://user-images.githubusercontent.com/21224753/57018678-063fda00-6c42-11e9-8b2f-29943d8b8bb0.png)
