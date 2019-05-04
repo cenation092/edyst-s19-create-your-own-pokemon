@@ -127,5 +127,13 @@ Then it will return a JSON file with updated info in this format.
 
 ![TABLE](https://user-images.githubusercontent.com/21224753/56925156-49883480-6aec-11e9-942b-5c9891685022.png)
 
-## Unit test result
+## Unit test
+
+#### How to run unit tests
+
+* Open terminal then cd `edyst-s19-create-your-own-pokemon/backend/tests`
+* Run command `python tests.py` in your terminal this will give you the result of test case all 4 types i.e `CRUD`.
+
+#### Unit test result 
+
 ![Unit test](https://user-images.githubusercontent.com/21224753/57018678-063fda00-6c42-11e9-8b2f-29943d8b8bb0.png)
