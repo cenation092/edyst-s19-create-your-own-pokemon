@@ -1,7 +1,10 @@
 import os
+import sys
 import json
 import unittest
 import requests
+
+sys.path.append('../') # set the path to import app
 
 from app import app, db
 
