@@ -132,7 +132,7 @@ Then it will return a JSON file with updated info in this format.
 #### How to run unit tests
 
 * Open terminal then cd `edyst-s19-create-your-own-pokemon/backend/tests`
-* Run command `python tests.py` in your terminal this will give you the result of test case all 4 types i.e `CRUD`.
+* Run command `python tests.py` in your terminal this will give you the result of test cases all 4 types i.e `CRUD`.
 
 #### Unit test result 
 
